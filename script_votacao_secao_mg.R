@@ -23,6 +23,7 @@ names(bd.br)
 table(bd.br$NM_VOTAVEL)
 table(bd.br$NM_MUNICIPIO)
 
+#### filtrando a base para conter apenas BH e criando uma variavel chave de zona e secao para usar depois para unir bases
 bd.bh <- bd.br %>% 
   filter(NM_MUNICIPIO %in% c("BELO HORIZONTE"),
          NR_TURNO == 1) %>% 
